@@ -2,11 +2,11 @@ import 'dart:io';
 
 void main() {
   stdout.write("What's your name? ");
-  final input = stdin.readLineSync();
+  final name = stdin.readLineSync();
 
-  print("Hi, $input What is your age?");
+  stdout.write("Hi, $name What is your age? ");
 
-  final age = int.tryParse(input ?? "");
+  final age = int.tryParse(stdin.readLineSync() ?? "");
   if (age == null) {
     print("Please write a number");
     return;
