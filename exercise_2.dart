@@ -2,9 +2,8 @@ import 'dart:io';
 
 void main(List<String> args) {
   stdout.write("Hi, please choose a number: ");
-  final input = stdin.readLineSync();
 
-  final number = int.tryParse(input ?? "");
+  final number = int.tryParse(stdin.readLineSync() ?? "");
   if (number == null) {
     print("Please write a number");
     return;

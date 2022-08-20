@@ -3,6 +3,7 @@ import 'dart:math';
 
 void main(List<String> args) {
   final randomNumber = Random().nextInt(101); // 0 <= n < 101
+
   stdout.write("Guess a number: ");
   final number = int.tryParse(stdin.readLineSync() ?? "");
   if (number == null) {
